@@ -108,7 +108,7 @@ img {
   margin-left: auto;
 }
 
-.contacts-item:not(:first-child) {
+.contacts-item:nth-child(2) {
   margin-left: 50px;
 }
 
@@ -126,8 +126,15 @@ img {
   color: var(--accent-color);
 }
 
+.contacts-link::before {
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /*background-image: ;*/
+}
 /*------------Стили основного контента------------*/
-
 .hero {
   padding: 200px 0;
 
@@ -226,6 +233,11 @@ img {
   margin-left: 30px;
 }
 
+.feature-item::before {
+  content: '';
+  display: block;
+  height: 70px;
+}
 .feature-title {
   font-size: 14px;
   line-height: 1.14;
