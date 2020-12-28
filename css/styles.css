@@ -6,6 +6,7 @@
   --primary-bcg-color: #ffffff;
   --secondary-bcg-color: #2f303a;
   --white-color: #ffffff;
+  --contact-icon-color: #757575;
 }
 
 body {
@@ -62,6 +63,8 @@ img {
 }
 
 .logo .header {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: #000000;
 }
 
@@ -113,6 +116,10 @@ img {
 }
 
 .contacts-link {
+  display: inline-flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   font-style: normal;
   font-weight: 500;
@@ -126,20 +133,24 @@ img {
   color: var(--accent-color);
 }
 
-.contacts-link::before {
-  content: '';
-  width: 16px;
-  height: 12px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  /*background-image: ;*/
+.contact-icon {
+  fill: var(--contact-icon-color);
 }
+
 /*------------Стили основного контента------------*/
 .hero {
   padding: 200px 0;
 
-  background-color: var(--secondary-bcg-color);
-
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
 
@@ -207,6 +218,7 @@ img {
 .section-list {
   display: flex;
 }
+
 .section-subtitle {
   margin-top: 0;
   margin-bottom: 10px;
@@ -226,6 +238,8 @@ img {
 }
 
 .feature-item {
+  display: inline-flex;
+  flex-direction: column;
   width: 270px;
 }
 
@@ -234,10 +248,35 @@ img {
 }
 
 .feature-item::before {
-  content: '';
   display: block;
-  height: 70px;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  content: '';
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
+
+.feature-item.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.feature-item.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.feature-item.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.feature-item.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 .feature-title {
   font-size: 14px;
   line-height: 1.14;
@@ -281,6 +320,38 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-block;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: 1px solid salmon;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.clients {
+  padding: 94px 0;
+}
+
+.clients-title {
+  margin-bottom: 245px;
+}
+
+.client-icon {
+  width: ;
+  height: ;
 }
 
 .project {
@@ -381,4 +452,12 @@ footer {
   font-weight: inherit;
   line-height: 1.71;
   letter-spacing: inherit;
+}
+
+.section-text.footer {
+  color: var(--white-color);
+
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
