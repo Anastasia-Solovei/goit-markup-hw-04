@@ -42,15 +42,21 @@
         <!------------------------------Контакты------------------------------------->
         <ul class="contacts-list list">
           <li class="contacts-item">
-            <a class="contacts-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="contacts-link" href="mailto:info@devstudio.com">
+              <svg class="contact-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
 
           <li class="contacts-item">
-            <a class="contacts-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
+            <a class="contacts-link" href="tel:+380961111111">
+              <svg class="contact-icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -69,7 +75,7 @@
           <h2 class="visually-hidden">Особенности компании</h2>
 
           <ul class="feature-list section-list list">
-            <li class="feature-item">
+            <li class="feature-item icon-antenna">
               <h3 class="feature-title section-subtitle">Внимание к деталям</h3>
               <p class="section-text">
                 Идейные соображения, а также начало повседневной работы по
@@ -77,7 +83,7 @@
               </p>
             </li>
 
-            <li class="feature-item">
+            <li class="feature-item icon-clock">
               <h3 class="feature-title section-subtitle">Пунктуальность</h3>
               <p class="section-text">
                 Задача организации, в особенности же рамки и место обучения
@@ -85,7 +91,7 @@
               </p>
             </li>
 
-            <li class="feature-item">
+            <li class="feature-item icon-diagram">
               <h3 class="feature-title section-subtitle">Планирование</h3>
               <p class="section-text">
                 Равным образом консультация с широким активом в значительной
@@ -93,7 +99,7 @@
               </p>
             </li>
 
-            <li class="feature-item">
+            <li class="feature-item icon-astronaut">
               <h3 class="feature-title section-subtitle">
                 Современные технологии
               </h3>
@@ -114,21 +120,21 @@
           <ul class="service-list section-list list">
             <li>
               <img
-                src="./images/img1.png"
+                src="./images/img1.jpg"
                 alt="человек занимается веб разработкой"
                 width="370"
               />
             </li>
             <li>
               <img
-                src="./images/img2.png"
+                src="./images/img2.jpg"
                 alt="человек занимается разработкой мобильных приложений"
                 width="370"
               />
             </li>
             <li>
               <img
-                src="./images/img3.png"
+                src="./images/img3.jpg"
                 alt="человек занимается созданием дизайнов"
                 width="370"
               />
@@ -152,6 +158,15 @@
               />
               <h3 class="team-mem-title section-subtitle">Игорь Демьяненко</h3>
               <p class="team-text section-text" lang="en">Product Designer</p>
+              <ul class="social-list list">
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg class="social-icon">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="team-item">
@@ -189,6 +204,63 @@
           </ul>
         </div>
       </section>
+
+      <!------------------------------Постоянные клиенты------------------------------>
+      <section class="clients section">
+        <div class="container">
+          <h2 class="clients-title section-title">Постоянные клиенты</h2>
+
+          <ul class="clients-list section-list list">
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-2"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-3"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-4"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-5"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="" class="client-link">
+                <svg class="client-icon">
+                  <use href="./images/icons.svg#icon-logo-6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <!----------------------------Подвал сайта-------------------------------------->
@@ -214,6 +286,23 @@
             </li>
           </ul>
         </address>
+
+        <p class="section-text footer">присоединяйтесь</p>
+
+        <ul class="social-list list">
+          <li class="social-item">
+            <a href="" class="social-link"></a>
+          </li>
+          <li class="social-item">
+            <a href="" class="social-link"></a>
+          </li>
+          <li class="social-item">
+            <a href="" class="social-link"></a>
+          </li>
+          <li class="social-item">
+            <a href="" class="social-link"></a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
