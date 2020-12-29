@@ -116,7 +116,8 @@ img {
 }
 
 .contacts-link {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -135,6 +136,7 @@ img {
 
 .contact-icon {
   fill: currentColor;
+  margin-right: 10px;
 }
 
 /*------------Стили основного контента------------*/
@@ -146,8 +148,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-    url(../images/hero.jpg);
+  background-image: /*linear-gradient(rgba(47, 48, 58, 0.4)),*/ url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -189,6 +190,8 @@ img {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button.primary {
@@ -247,34 +250,20 @@ img {
   margin-left: 30px;
 }
 
-.feature-item::before {
-  display: block;
-
+.feature-icon-wrapper {
+  display: flex;
   height: 120px;
-  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
 
-  content: '';
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
+  margin-bottom: 30px;
   border-radius: 4px;
 }
 
-.feature-item.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.feature-item.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-
-.feature-item.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.feature-item.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
+.feature-icon {
+  height: 70px;
+  width: 70px;
 }
 
 .feature-title {
@@ -294,11 +283,16 @@ img {
 .team.section {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: #f5f4fa;
 }
 
 .team-item {
   padding-bottom: 30px;
   width: 270px;
+  background-color: var(--primary-bcg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item:not(:first-child) {
@@ -320,48 +314,60 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .social-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .social-link {
-  display: inline-block;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
+
+  color: var(--primary-social-icon-color);
   background-color: transparent;
+
   border-radius: 50%;
 }
 
 .social-link:hover {
+  color: var(--white-color);
   background-color: var(--accent-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
-
-  fill: var(--primary-social-icon-color);
+  fill: currentColor;
 }
 
-.social-icon:hover {
-  fill: var(--white-color);
-}
-
-.clients {
+.clients.section {
   padding: 94px 0;
 }
 
-.clients-title {
-  margin-bottom: 245px;
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .client-icon {
-  width: ;
-  height: ;
+  fill: #afb1b8;
 }
 
 .project {
@@ -388,9 +394,13 @@ img {
   margin-left: 30px;
   margin-bottom: 30px;
   width: 370px;
-  border: 1px solid #eeeeee;
+  background: #ffffff;
 }
 
+.project-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-item:nth-child(3n + 1) {
   margin-left: 0;
 }
@@ -401,6 +411,9 @@ img {
 
 .project-description {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  box-sizing: border-box;
 }
 
 .project-title {
@@ -470,4 +483,35 @@ footer {
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.social-footer-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  width: 206px;
+  outline: 1px solid salmon;
+}
+
+.section-text.footer {
+  margin-bottom: 20px;
+}
+.social-list.footer {
+  justify-content: space-between;
+}
+
+.social-link.footer {
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+}
+
+.social-link.footer:hover {
+  background-color: var(--accent-color);
+}
+
+.social-icon.footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
