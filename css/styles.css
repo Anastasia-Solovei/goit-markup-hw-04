@@ -335,7 +335,8 @@ img {
   border-radius: 50%;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -397,10 +398,12 @@ img {
   background: #ffffff;
 }
 
-.project-item:hover {
+.project-item:hover,
+.project-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .project-item:nth-child(3n + 1) {
   margin-left: 0;
 }
@@ -506,7 +509,8 @@ footer {
   border-radius: 50%;
 }
 
-.social-link.footer:hover {
+.social-link.footer:hover,
+.project-item:focus {
   background-color: var(--accent-color);
 }
 
