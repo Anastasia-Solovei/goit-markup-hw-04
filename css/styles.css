@@ -505,7 +505,6 @@ footer {
   display: inline-flex;
   flex-direction: column;
   width: 206px;
-  outline: 1px solid salmon;
 }
 
 .section-text.footer {
