@@ -557,7 +557,7 @@ footer {
 }
 
 .social-link.footer:hover,
-.project-item:focus {
+.social-link.footer:focus {
   background-color: var(--accent-color);
 }
 
